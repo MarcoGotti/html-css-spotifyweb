@@ -9,12 +9,12 @@
 :root {
   --spotify-black: black;
   --spotify-white: white;
-  --spotify-header: rgb(0, 0, 65);
-  --spotify-main: rgb(47, 47, 58);
-  --spotify-primary: rgb(237, 237, 237);
-  --spotify-secondary: rgb(117, 117, 117);
-  --spotify-footer: rgb(90, 47, 47);
-  --spotify-view: rgb(218, 255, 52);
+  --spotify-header: #080b12;
+  --spotify-main: #141922;
+  --spotify-primary: #d2d2d2;
+  --spotify-secondary: #a3a3a3;
+  --spotify-footer: #282828;
+  --spotify-view: #aaf82d;
 }
 
 body {
@@ -40,19 +40,8 @@ a{
 }
 
 .debug .call-to-action {
-  height: 40px;
-  width: 220px;
-  background-color: red;
-}
-
-.debug .icon{
-  height: 20px;
-  border: 1px solid black;
-  background-color: rosybrown;
-}
-
-.debug .icon {
-  width: 20px;
+  
+  
 }
 
 /* #endregion DEBUG */
@@ -80,6 +69,14 @@ a{
 
 .space-btn {
   justify-content: space-between;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
 }
 
 .mb-20 {
@@ -135,7 +132,17 @@ a{
 .call-to-action {
   position: absolute;
   right: calc(50px + 20px);
+  height: 40px;
+  width: 220px;
   margin-top: 20px;
+}
+
+.btn-upgrade{
+    border: 1px solid var(--spotify-primary);
+    padding: 12px 39px;
+    border-radius: 22px;
+    
+
 }
 
 /* #endregion HEADER */
@@ -146,18 +153,19 @@ a{
   width: 50px;
   height: calc(100vh - 90px);
   background-color: var(--spotify-black);
+  overflow-y: auto;
 }
 
 .logo-small {
-  width: 30px;
+  width: 32px;
   aspect-ratio: 1;
-  margin: 5px 0 0 10px;
+  margin: 5px 0 8px 9px;
 }
 
 .logo {
   width: 130px;
   height: 40px;
-  margin: 20px 0 30px 20px;
+  margin: 20px 0 21px 20px;
 }
 
 .on-view {
@@ -166,13 +174,49 @@ a{
   background: var(--spotify-view);
 }
 
+.icon{
+    height: 25px;
+}
+
+.icon-search-adjust{
+    width: 25px;
+    overflow: hidden;
+    left: -3px;
+    margin-bottom: 5px;
+}
+
+.icon #home {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 20
+}
+
+.icon #search{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 200,
+    'GRAD' 0,
+    'opsz' 20;
+    font-size: 36px;
+}
+
+.icon #library{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 20;
+}
+
 .links {
-  margin-left: 15px;
+  margin-left: 13px;
 }
 
 .box-sidebar {
-  height: calc(100% - 150px - 25px);
-  margin: 25px 0 0 20px;
+    height: calc(100% - 81px - 87px);
+    padding: 25px 0 0 20px;
 
   & .add-playlist {
     margin: 10px 0 18px 0;
@@ -188,11 +232,11 @@ a{
 }
 
 .sidebar-low{
-    margin: 0 20px 6px 0;
+    margin: 0 0 6px -7px;
+    bottom: 0;
 
     & .download{
-        border-bottom: 1px solid var(--spotify-secondary);
-        padding: 0 0 10px 5px; 
+        padding: 0 0 10px 7px; 
         
         & .btn{
             width: 10px;
@@ -252,9 +296,6 @@ a{
 /* #region MEDIA QUERY */
 
 @media screen and (min-width: 576px) {
-  #sidebar {
-    width: 230px;
-  }
 
   .d-block-s {
     display: block;
@@ -264,17 +305,25 @@ a{
     display: flex;
   }
 
+  .flex-column-s{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .static-s{
+    position: static;
+  }
+
   #site-header {
     left: 230px;
   }
 
-  #site-main {
-    width: calc(100% - 230px);
-    margin: 90px 0 0 230px;
-  }
-
   .call-to-action {
     right: calc(230px + 20px);
+  }
+
+  #sidebar {
+    width: 230px;
   }
 
   .logo-small {
@@ -282,9 +331,27 @@ a{
   }
 
   .links {
-    margin-left: calc(23px - 3px);
+    margin-left: calc(20px - 3px);
+    padding-top: 7px;
   }
+
+  .sidebar-low{
+    margin: 0 20px 6px 0;
+
+    & .download{
+        padding: 0 0 10px 5px;
+        border-bottom: 1px solid var(--spotify-secondary); 
+    }
 }
+    #site-main {
+        width: calc(100% - 230px);
+        margin: 90px 0 0 230px;
+    }    
+}
+
+  
+
+
 
 @media screen and (min-width: 768px) {
 }

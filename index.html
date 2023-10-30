@@ -10,12 +10,24 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body class="debug">
     <header id="site-header">
-      <div class="call-to-action"></div>
+      <div class="call-to-action d-flex">
+        <a class="btn-upgrade c-white uppercase f-12" href="#">effettua l'upgrade</a>
+      </div>
     </header>
     <!-- /.#site-header -->
     <section id="sidebar">
@@ -50,22 +62,30 @@
         <div class="on-view d-none d-block-s"></div>
         <div class="links">
           <div class="d-flex gap c-white f-12 weight-700">
-            <div class="icon"></div>
-            <div class="icon-name d-none d-block-s">Home</div>
+            <div class="icon"><span id="home" class="material-symbols-outlined">
+                home
+                </span>
+            </div>
+            <div class="icon-name d-none d-flex-s align-center">Home</div>
           </div>
           <div class="d-flex gap c-gray f-12 weight-700">
-            <div class="icon"><i class="fa-solid fa-magnifying-glass fa-xl"></i></div>
-            <div class="icon-name d-none d-block-s">Cerca</div>
+            <div class="icon relative icon-search-adjust"><span id="search" class="absolute material-symbols-outlined">
+                search
+                </span>
+            </div>
+            <div class="icon-name d-none d-flex-s align-center">Cerca</div>
           </div>
           <div class="d-flex gap c-gray f-12 weight-700">
-            <div class="icon"></div>
-            <div class="icon-name d-none d-block-s">La tua Libreria</div>
+            <div class="icon"><span id="library" class="material-symbols-outlined">
+                newsstand
+                </span></div>
+            <div class="icon-name d-none d-flex-s align-center">La tua Libreria</div>
           </div>
         </div>
       </div>
       <!-- /.NAV -->
-      <div class="box-sidebar flex-column space-btn d-none d-flex-s">
-        <div class="sidebar-top">
+      <div class="box-sidebar flex-column-s space-btn">
+        <div class="sidebar-top d-none d-block-s">
           <div class="playlist c-white uppercase f-14 weight-700">Playlist</div>
           <div class="add-playlist d-flex">
             <div class="plus-btn d-flex align-center justify-center f-40">
@@ -84,14 +104,16 @@
           <div class="item f-12 c-gray mb-20">Nome Playlist</div>
         </div>
         <!-- /.SIDEBAR-TOP -->
-        <div class="sidebar-low">
+        <div class="sidebar-low absolute static-s">
           <div class="download d-flex">
-            <a class="btn c-white" href="#"><i class="fa-solid fa-arrow-down fa-2xs"></i></a>
-            <div class="installa c-gray f-12">Installa app</div>
+            <a class="btn c-white" href="#"
+              ><i class="fa-solid fa-arrow-down fa-2xs"></i
+            ></a>
+            <div class="installa d-none c-gray f-12 d-flex-">Installa app</div>
           </div>
           <div class="user d-flex-s">
             <div class="user-avatar"></div>
-            <div class="user-name c-white">John Doe</div>
+            <div class="user-name c-white d-none d-flex-">John Doe</div>
           </div>
         </div>
         <!-- /.SIDEBAR-LOW -->
