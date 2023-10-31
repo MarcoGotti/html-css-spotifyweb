@@ -12,7 +12,7 @@
   --spotify-header: #080b12;
   --spotify-main: #141922;
   --spotify-primary: #f7f7f7;
-  --spotify-secondary: #6c6c6c;
+  --spotify-secondary: #848484;
   --spotify-footer: #282828;
   --spotify-view: #aaf82d;
 }
@@ -25,6 +25,33 @@ a {
   text-decoration: none;
 }
 
+.box-main-nav{
+    max-width: 94%;
+    margin: auto;
+}
+
+/* .container-main-nav{
+    width: 90%;
+    margin: 17px auto;
+}
+
+.row-main-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+}
+
+.col-3{
+    flex-basis: 24%;
+    padding: 0 10px;
+}
+
+.col-3plus{
+    flex-basis: 28%;
+    padding: 0 10px;
+} */
+
 #site-header,
 #sidebar {
   position: fixed;
@@ -34,7 +61,6 @@ a {
 /* #endregion COMMON */
 
 /* #region DEBUG */
-
 
 /* #endregion DEBUG */
 
@@ -48,6 +74,7 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .gap {
   gap: 5px;
 }
@@ -78,6 +105,10 @@ a {
 
 .mb-20 {
   margin-bottom: 20px;
+}
+
+.mr-20{
+    margin-right: 20px;
 }
 
 /* colors */
@@ -271,6 +302,18 @@ a {
   overflow-y: auto;
 }
 
+#upper-row{
+    margin-top: 17px;
+    margin-bottom: 30px;
+}
+
+.horizontal-on-bar {
+    width: 28px;
+    height: 2px;
+    background: var(--spotify-view);
+    margin-left: 30px;
+  }
+
 /* #endregion MAIN */
 
 /* #region FOOTER */
@@ -308,7 +351,7 @@ a {
     }
   }
 
-  & .played-song-actions{
+  & .played-song-actions {
     margin-right: 20px;
   }
 }
@@ -396,6 +439,22 @@ a {
     display: flex;
   }
 
+  .d-none-s{
+    display: none;
+  }
+
+  .d-block-s{
+    display: block;
+  } 
+
+  .mr-s-0{
+    margin-right: 0;
+  }
+
+  .mr-s-20{
+    margin-right: 20px;
+  }
+
   .flex-column-s {
     display: flex;
     flex-direction: column;
@@ -452,36 +511,67 @@ a {
     & .played-song-cover {
       height: 40px;
     }
-  
+
     & .played-song-info {
-  
       & .played-song-title {
         width: 55px;
       }
     }
   }
 
-   /* #endregion s-footer */
+  /* #endregion s-footer */
 }
 
 @media screen and (min-width: 768px) {
-    .flex-row-md{
-        flex-direction: row;
+    /* #region md-utility */
+
+    .d-block-md{
+        display: block;
     }
 
-    .left {
-        & .played-song-cover {
-          height: 43px;
-        }
-
-    .played-song-actions{
-        margin-left: 40px;
-        gap: 15px;
+    .d-none-md{
+        display: none;
     }
+
+    .mr-md-20{
+        margin-right: 20px;
+    }
+
+    /* #region md-utility */
+
+  .flex-row-md {
+    flex-direction: row;
+  }
+
+  .left {
+    & .played-song-cover {
+      height: 43px;
+    }
+
+    .played-song-actions {
+      margin-left: 40px;
+      gap: 15px;
+    }
+  }
 }
 
-
 @media screen and (min-width: 1200px) {
+
+    /* #region lg-utility */
+
+    .d-block-lg{
+        display: block;
+    }
+
+    .d-none-lg{
+        display: none;
+    }
+
+    .mr-lg-20{
+        margin-right: 20px;
+    }
+
+    /* #region lg-utility */
 }
 
 /* #endregion MEDIA QUERY */
