@@ -37,8 +37,6 @@ a{
 
 /* #region DEBUG */
 
-
-.debug .right,
 .debug .left{
     background-color: red;
     border: 1px solid white;
@@ -70,6 +68,10 @@ a{
 
 .space-btn {
   justify-content: space-between;
+}
+
+.flex-end{
+    justify-content: flex-end;
 }
 
 .relative{
@@ -373,6 +375,34 @@ a{
     & .song-lenght{
         flex-basis: 10%;
         text-align: end;
+    }
+}
+
+.right{
+    & .volume-box{
+        flex-basis: 50%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 3px;
+        padding: 0 3px 0 20px;
+        & i{
+            flex-basis: 33%;
+            max-width: 25px;
+        }
+    }
+    & .volume-bar{
+        flex-basis: 50%;
+        max-width: 85px;
+        height: 3px;
+        background-color: var(--spotify-secondary);
+        border-radius: 1px;
+
+        & .volume-status{
+            height: 100%;
+            width: 25px;
+            background-color: var(--spotify-primary);
+            border-radius: 1px;
+        }
     }
 }
 
