@@ -12,10 +12,6 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
@@ -23,14 +19,7 @@
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body class="debug">
-    <header id="site-header">
-      <div class="call-to-action d-flex">
-        <a class="btn-upgrade c-white uppercase f-12" href="#"
-          >effettua l'upgrade</a
-        >
-      </div>
-    </header>
+  <body>
     <!-- /.#site-header -->
     <section id="sidebar">
       <div class="logo-small">
@@ -62,26 +51,38 @@
       <!-- /.LOGOS -->
       <div class="nav d-flex">
         <div class="on-view d-none d-block-s"></div>
-        <div class="links">
-          <div class="d-flex gap c-white f-12 weight-700">
+        <div class="links flex-column gap">
+          <div class="home d-flex gap c-white f-12 weight-700 mb-5">
             <div class="icon">
-              <span id="home" class="material-symbols-outlined"> home </span>
+              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                  fill="#e7e7e7"
+                />
+              </svg>
             </div>
             <div class="icon-name d-none d-flex-s align-center">Home</div>
           </div>
-          <div class="d-flex gap c-gray f-12 weight-700">
-            <div class="icon relative icon-search-adjust">
-              <span id="search" class="absolute material-symbols-outlined">
-                search
-              </span>
+          <div class="search d-flex gap c-gray f-12 weight-700 mb-2">
+            <div class="icon">
+              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                  fill="#848484"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
             <div class="icon-name d-none d-flex-s align-center">Cerca</div>
           </div>
-          <div class="d-flex gap c-gray f-12 weight-700">
+          <div class="library d-flex gap c-gray f-12 weight-700">
             <div class="icon">
-              <span id="library" class="material-symbols-outlined">
-                newsstand
-              </span>
+              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                  fill="#848484"
+                />
+              </svg>
             </div>
             <div class="icon-name d-none d-flex-s align-center">
               La tua Libreria
@@ -90,7 +91,7 @@
         </div>
       </div>
       <!-- /.NAV -->
-      <div class="box-sidebar flex-column-s space-btn">
+      <div class="box-sidebar flex-column flex-end space-btn-s">
         <div class="sidebar-top d-none d-block-s">
           <div class="playlist c-white uppercase f-14 weight-700">Playlist</div>
           <div class="add-playlist d-flex">
@@ -110,16 +111,17 @@
           <div class="item f-12 c-gray mb-20">Nome Playlist</div>
         </div>
         <!-- /.SIDEBAR-TOP -->
-        <div class="sidebar-low absolute static-s">
+        <div class="sidebar-low mb-5 mr-s-20">
           <div class="download d-flex">
-            <a class="btn c-white" href="#"
-              ><i class="fa-solid fa-arrow-down fa-2xs"></i
-            ></a>
+            <a class="btn" href="#"
+              ><svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Download icon</title><path d="M12 11.657V6h-1v5.65L9.076 9.414l-.758.65 3.183 3.702 3.195-3.7-.758-.653L12 11.657zM11.5 2C7.358 2 4 5.358 4 9.5c0 4.142 3.358 7.5 7.5 7.5 4.142 0 7.5-3.358 7.5-7.5C19 5.358 15.642 2 11.5 2zm0 14C7.916 16 5 13.084 5 9.5S7.916 3 11.5 3 18 5.916 18 9.5 15.084 16 11.5 16z" fill="#e7e7e7" fill-rule="evenodd"/></svg></a>
             <div class="installa d-none c-gray f-12 d-flex-s">Installa app</div>
           </div>
-          <div class="user d-flex-s">
-            <div class="user-avatar"></div>
-            <div class="user-name c-white d-none d-flex-s">John Doe</div>
+          <div class="profile d-flex-s">
+            <div class="profile-avatar">
+                <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg"><title>User Icon</title><path d="M67.74 61.78l-14.5-8.334c-.735-.422-1.24-1.145-1.385-1.98-.145-.835.088-1.685.638-2.33l5.912-6.93c3.747-4.378 5.81-9.967 5.81-15.737v-2.256c0-6.668-2.792-13.108-7.658-17.67C51.622 1.92 45.17-.386 38.392.054c-12.677.82-22.607 11.772-22.607 24.934v1.483c0 5.77 2.063 11.36 5.81 15.736l5.912 6.933c.55.644.783 1.493.638 2.33-.143.834-.648 1.556-1.383 1.98l-14.494 8.33C4.7 66.077 0 74.15 0 82.844v6.76h3.333v-6.76c0-7.5 4.055-14.46 10.59-18.174l14.5-8.334c1.597-.918 2.692-2.487 3.007-4.302.315-1.815-.19-3.66-1.387-5.06l-5.913-6.936c-3.23-3.775-5.01-8.594-5.01-13.57v-1.484c0-11.41 8.562-20.9 19.488-21.608 5.85-.377 11.415 1.61 15.67 5.598 4.26 3.992 6.605 9.404 6.605 15.24v2.254c0 4.976-1.778 9.796-5.01 13.57l-5.915 6.935c-1.195 1.4-1.7 3.246-1.386 5.06.313 1.816 1.41 3.385 3.008 4.303l14.507 8.338c6.525 3.71 10.58 10.67 10.58 18.17v6.76H80v-6.76c0-8.695-4.7-16.768-12.26-21.063z" fill="#ffffff" fill-rule="evenodd"/></svg>
+            </div>
+            <div class="profile-name c-white d-none d-flex-s weight-800">John Doe</div>
           </div>
         </div>
         <!-- /.SIDEBAR-LOW -->
@@ -127,51 +129,272 @@
     </section>
     <!-- /.sidebar -->
     <main id="site-main">
-        <div class="box-main-nav">
-            <div id="upper-row" class="d-flex justify-center">
-                <div class="current-page">
-                    <div class="c-gray uppercase f-12 weight-700 mr-20">in evidenza</div>
-                    <div class="horizontal-on-bar"></div>
-                </div>     
-                <div class="c-gray uppercase f-12 weight-700 mr-20">podcast</div>
-                <div class="c-gray uppercase f-12 weight-700 mr-20 mr-s-0 mr-md-20">classifiche</div>
-                <div class="c-gray uppercase f-12 weight-700 d-none-s d-block-md mr-md-20">generi e mood</div>
-                <div class="c-gray uppercase f-12 weight-700 d-none d-block-md mr-lg-20">nuove uscite</div>
-                <div class="c-gray uppercase f-12 weight-700 d-none d-block-lg">scopri</div> 
-            </div>
-            <div id="lower-row" class="d-flex justify-center">
-                <div class="c-gray uppercase f-12 weight-700 mr-20 d-none">in evidenza</div>
-                <div class="c-gray uppercase f-12 weight-700 mr-20 d-none">podcast</div>
-                <div class="c-gray uppercase f-12 weight-700 mr-20 d-none">classifiche</div>
-                <div class="c-gray uppercase f-12 weight-700 d-none d-block-s mr-s-20 d-none-md">generi e mood</div>
-                <div class="c-gray uppercase f-12 weight-700 mr-20 d-none-md">nuove uscite</div>
-                <div class="c-gray uppercase f-12 weight-700 d-none-lg">scopri</div> 
-            </div>
-            
+      <div role="call-to-action" id="site-header" class="relative">
+        <a class="btn-upgrade c-white uppercase f-12" href="#"
+          >effettua l'upgrade</a>
+      </div>
+      <section class="box-main-nav">
+        <div id="upper-row" class="d-flex justify-center">
+          <div class="current-page fit-content">
+            <span class="c-gray uppercase f-12 weight-700 mr-20">
+              in evidenza
+            </span>
+            <div class="horizontal-on-bar"></div>
+          </div>
+          <span class="c-gray uppercase f-12 weight-700 mr-20 fit-content">
+            podcast
+          </span>
+          <span
+            class="c-gray uppercase f-12 weight-700 mr-20 mr-s-0 mr-md-20 fit-content"
+          >
+            classifiche
+          </span>
+          <span
+            class="c-gray uppercase f-12 weight-700 d-none-s d-block-md mr-md-20 fit-content"
+          >
+            generi e mood
+          </span>
+          <span
+            class="c-gray uppercase f-12 weight-700 d-none d-block-md mr-lg-20 fit-content"
+          >
+            nuove uscite
+          </span>
+          <span
+            class="c-gray uppercase f-12 weight-700 d-none d-block-lg fit-content"
+          >
+            scopri
+          </span>
         </div>
-        <!-- /.box-main-nav -->
-        <section class="recently-played"></section>
-        <!-- /.recently-played -->
-        <section class="suggestions"></section>
-        <!-- /.suggestions -->
-        <section class="popular"></section>
-        <!-- /.popular -->
+        <div id="lower-row" class="d-flex justify-center">
+          <span
+            class="c-gray uppercase f-12 weight-700 d-none d-block-s mr-s-20 d-none-md fit-content"
+          >
+            generi e mood
+          </span>
+          <span
+            class="c-gray uppercase f-12 weight-700 mr-20 d-none-md fit-content"
+          >
+            nuove uscite
+          </span>
+          <span class="c-gray uppercase f-12 weight-700 d-none-lg fit-content">
+            scopri
+          </span>
+        </div>
+      </section>
+      <!-- /.box-main-nav -->
+      <section class="recently-played">
+        <div class="container">
+          <h3 class="c-white mb-20">Recently played</h3>
+          <div class="row">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/metal_lifting.jpg" alt="Cover" />
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    Heavy metal
+                  </div>
+                  <div class="sub c-gray f-10 mb-5">subtitle</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/stranger.jpeg" alt="Cover" />
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    Stranger Things, Vol.1 (a Netflix Original Series
+                    Soundtrack)
+                  </div>
+                  <div class="sub c-gray f-10 mb-5">
+                    Kyle Dixon and Michael Stein
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/aquietplace.jpeg" alt="" />
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    A Quiet Place
+                  </div>
+                  <div class="sub c-gray f-10 mb-5">subtitle</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/split.jpeg" alt="Cover"/>
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    Split
+                  </div>
+                  <div class="sub c-gray f-10 mb-5">subtitle</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/cure.jpeg" alt="Cover"/>
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    A cure for wellness
+                  </div>
+                  <div class="sub c-gray f-10 mb-5">subtitle</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/sinister.jpeg" alt="Cover"/>
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    Sinister
+                  </div>
+                  <div class="sub c-gray f-10 mb-5">subtitle</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.recently-played -->
+      <section class="suggestions">
+        <div class="container">
+          <h3 class="c-white mb-5">Creato per John Doe</h3>
+          <div class="c-gray f-10 mb-20">
+            Più ascolti, più accurati saranno i suggerimenti.
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/radar.jpeg" alt="Cover" />
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    release Radar
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/mixdaily.jpeg" alt="Cover" />
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    Daily Mix 1
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.suggestions -->
+      <section class="popular">
+        <div class="container">
+          <h3 class="c-white mb-5">Artisti più popolari</h3>
+          <div class="c-gray f-10 mb-20">
+            Più ascolti, più accurati saranno i suggerimenti.
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/youg.jpeg" alt="Cover" />
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    Lana Del Rey
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div class="album">
+                <div class="album-cover mb-15 relative">
+                  <img src="./assets/img/player_left.jpg" alt="Cover" />
+                  <div class="hover-play absolute c-white">
+                    <i class="fa-regular fa-circle-play fa-4x"></i>
+                  </div>
+                </div>
+                <div class="album-details text-center">
+                  <div class="album-title c-white f-12 weight-800 mb-10">
+                    Clark Griswold feat Adrian Eagle
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.popular -->
     </main>
     <!-- /#site-main -->
     <footer id="site-footer">
       <div class="container-footer d-flex">
         <div class="left d-flex align-center">
-           <div class="played-song-cover">
-            <img src="./assets/img/sinister.jpeg" alt="cover">
-           </div>
-           <div class="played-song-info">
-            <div class="played-song-author c-white f-12 weight-700">Sinister</div>
-            <div class="played-song-title c-gray f-10 weight-700">Brano Nome</div>
-           </div>
-           <div class="played-song-actions flex-column flex-row-md">
-            <div class="heart"><i class="fa-regular fa-heart c-gray f-14"></i></div>
-            <div class="folder"><i class="fa-regular fa-folder c-gray f-14"></i></div>
-           </div> 
+          <div class="played-song-cover">
+            <img src="./assets/img/sinister.jpeg" alt="cover" />
+          </div>
+          <div class="played-song-info">
+            <div class="played-song-author c-white f-12 weight-700">
+              Sinister
+            </div>
+            <div class="played-song-title c-gray f-10 weight-700">
+              Brano Nome
+            </div>
+          </div>
+          <div class="played-song-actions flex-column flex-row-md">
+            <div class="heart">
+              <i class="fa-regular fa-heart c-gray f-14"></i>
+            </div>
+            <div class="folder">
+              <i class="fa-regular fa-folder c-gray f-14"></i>
+            </div>
+          </div>
         </div>
         <div class="middle flex-column">
           <div class="play d-flex align-center space-btn c-white">
@@ -184,7 +407,9 @@
           <div class="timebar d-flex align-center">
             <div class="played-time c-white f-10">0:25</div>
             <div class="bar">
-              <div class="played-bar"></div>
+              <div class="played-bar relative">
+                <div class="played-bar-cursor absolute d-none"></div>
+              </div>
             </div>
             <div class="song-lenght c-white f-10">4:35</div>
           </div>
@@ -195,9 +420,10 @@
             <i class="fa-solid fa-display"></i>
             <i class="fa-solid fa-volume-high"></i>
           </div>
-
           <div class="volume-bar">
-            <div class="volume-status"></div>
+            <div class="volume-status relative">
+                <div class="volume-status-cursor absolute d-none"></div>
+            </div>
           </div>
         </div>
       </div>
