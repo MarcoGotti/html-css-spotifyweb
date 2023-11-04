@@ -35,21 +35,7 @@ img {
   min-width: 672px;
 }
 
-.box-main-nav {
-  max-width: 94%;
-  margin: auto;
-}
-
-#sidebar {
-  position: fixed;
-  top: 0;
-}
-
 /* #endregion COMMON */
-
-/* #region DEBUG */
-
-/* #endregion DEBUG */
 
 /* #region UTILITY */
 
@@ -65,9 +51,13 @@ img {
 }
 
 .col-6 {
-  flex-basis: 25%; /* before BONUS: flex-basis: 50%; */
+  flex-basis: 25%; /* before BONUS #1: flex-basis: 50%; */
   padding: 0 5px;
 }
+
+.d-none {
+    display: none;
+  }
 
 .d-flex {
   display: flex;
@@ -98,6 +88,10 @@ img {
   justify-content: flex-end;
 }
 
+.space-around{
+    justify-content: space-around;
+}
+
 .relative {
   position: relative;
 }
@@ -110,8 +104,8 @@ img {
   min-inline-size: fit-content;
 }
 
-.d-none {
-  display: none;
+.order-1{
+    order: 1;
 }
 
 .mb-20 {
@@ -138,53 +132,55 @@ img {
   margin-bottom: 10px;
 }
 
-/* colors */
-.c-white {
-  color: var(--spotify-primary);
-}
-.c-gray {
-  color: var(--spotify-secondary);
-}
+        /* colors */
+        .c-white {
+        color: var(--spotify-primary);
+        }
+        .c-gray {
+        color: var(--spotify-secondary);
+        }
 
-/* fonts and text */
+        /* fonts and text */
 
-.text-center {
-  text-align: center;
-}
+        .text-center {
+        text-align: center;
+        }
 
-.uppercase {
-  text-transform: uppercase;
-}
+        .uppercase {
+        text-transform: uppercase;
+        }
 
-.f-10 {
-  font-size: 8px;
-}
+        .f-10 {
+        font-size: 8px;
+        }
 
-.f-12 {
-  font-size: 12px;
-}
+        .f-12 {
+        font-size: 12px;
+        }
 
-.f-14 {
-  font-size: 14px;
-}
+        .f-14 {
+        font-size: 14px;
+        }
 
-.f-40 {
-  font-size: 40px;
-}
+        .f-40 {
+        font-size: 40px;
+        }
 
-.weight-700 {
-  font-weight: 700;
-}
+        .weight-700 {
+        font-weight: 700;
+        }
 
-.weight-800 {
-  font-weight: 800;
-}
+        .weight-800 {
+        font-weight: 800;
+        }
 
 /* #endregion UTILITY */
 
 /* #region SIDEBAR */
 
 #sidebar {
+  position: fixed;
+  top: 0;
   width: 50px;
   height: calc(100vh - 90px);
   background-color: var(--spotify-black);
@@ -269,6 +265,8 @@ img {
 
 /* #endregion SIDEBAR */
 
+/* #region HEADER */
+
 #site-header {
     width: calc(100% - 50px);
     height: 90px;
@@ -296,7 +294,9 @@ img {
         transition: all 200ms ease-in-out;
         animation: heartbeat 1.8s linear 1.2s 3;
       }
-}
+    }
+
+/* #endregion HEADER */
 
 /* #region MAIN */
 
@@ -308,21 +308,27 @@ img {
   overflow-y: auto;
 }
 
-#upper-row {
-  margin-top: 17px;
-  margin-bottom: 30px;
-}
+.box-main-nav {
+    max-width: 94%;
+    margin: auto;
 
-.current-page {
-  margin-top: -3px;
+    & #upper-row {
+        margin-top: 17px;
+        margin-bottom: 30px;
 
-  & .horizontal-on-bar {
-    width: 28px;
-    height: 2px;
-    background: var(--spotify-view);
-    margin-left: 30px;
+        & .horizontal-on-bar {
+            width: 28px;
+            height: 2px;
+            background: var(--spotify-view);
+            margin-left: 30px;
+        }
+
+        & .main-nav-icon .fa-ellipsis{
+            font-size: 25px;
+            margin-top: -5px
+        }
+      }
   }
-}
 
 .album-cover {
   & img {
@@ -370,9 +376,9 @@ img {
   & .played-song-info {
     margin: 0 20px 0 8px;
 
-    & .played-song-title {
+    /* & .played-song-title {
       width: 30px;
-    }
+    } */
   }
 
   & .played-song-actions {
@@ -436,7 +442,6 @@ img {
 .right {
   & .volume-box {
     flex-basis: 50%;
-    gap: 3px;
     padding: 0 3px 0 20px;
     & i {
       flex-basis: 33%;
@@ -473,7 +478,8 @@ img {
 
 /* #region MEDIA QUERY */
 
-@media screen and (min-width: 480px){   /* QUERY addedd afterwards for the bonus */
+@media screen and (min-width: 480px){   /* QUERY added afterwards for the BONUS #4 - header + box-main-nav */
+    
     .d-none-xs{
         display: none;
     }
@@ -498,6 +504,7 @@ img {
 
   .d-flex-s {
     display: flex;
+    flex-direction: row;
   }
 
   .d-none-s {
@@ -520,6 +527,24 @@ img {
   .space-btn-s {
     justify-content: space-between;
   }
+
+  .flex-start-s{
+    justify-content: flex-start;
+  }
+
+  .flex-end-s{
+    justify-content: flex-end;
+  }
+
+  .gap-s-15{
+    gap: 15px;
+  }
+
+  .f-12-s{
+    font-size: 12px;
+  }
+
+  
 
   /* #endregion s-utility */
 
@@ -548,10 +573,6 @@ img {
   }
 
   /* #endregion s-sidebar */
-
-  /* #region s-main */
-
-  /* #endregion s-main */
 
   /* #region s-footer */
   .left {
@@ -588,9 +609,11 @@ img {
     flex-direction: row;
   }
 
-  .col-md-3 {
-    /* before BONUS: flex-basis: 25%; */
+  .order-md-0{
+    order: 0;
   }
+
+  .col-md-3 {}     /* before BONUS: flex-basis: 25%; */
 
   /* #endregion md-utility */
 
@@ -607,6 +630,7 @@ img {
 }
 
 @media screen and (min-width: 992px) {
+  
   .d-block-lg {
     display: block;
   }
@@ -618,6 +642,10 @@ img {
   .mr-lg-20 {
     margin-right: 20px;
   }
+
+  .gap-lg-25{
+    gap: 25px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -627,9 +655,25 @@ img {
   }
 }
 
-@media screen and (max-height: 576px) {
+@media screen and (max-height: 576px) {   /* QUERY on the Y-ax */
  
-    #site-header {
+        /* nicer hiding-above-transition of header, but footer not stable (moving-Y with a delay to vieport). So I decided to keep it simple but clean.
+        
+        #site-main,
+        #site-header{
+            transition: height .5s linear;
+        }
+        
+        #site-header {          
+            height: 0px;
+        }
+        
+        .btn-upgrade,
+        .btn-upgrade-small{
+            filter: opacity(0);
+        }*/
+        
+  #site-header {
     display: none;
   }
 
@@ -667,16 +711,19 @@ img {
 }
 
 .btn-upgrade-small:hover {
-    transform: scale(1.15);
-    filter: brightness(200%);
-    border: 2px;
-  }
+  transform: scale(1.2);
+  filter: brightness(200%);
+  border: 2px;
+}
 
 #upper-row span:hover,
-#lower-row span:hover {
+#lower-row span:hover,
+.current-page:hover,
+.main-nav-icon:hover {
   filter: brightness(200%);
   cursor: pointer;
 }
+
 
 .album-cover:hover img {
   filter: opacity(0.6);

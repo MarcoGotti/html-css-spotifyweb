@@ -126,21 +126,24 @@
       <nav class="box-main-nav">
         <div id="upper-row" class="d-flex justify-center">
           <div class="current-page fit-content mr-20">
-            <span class="c-gray uppercase f-12 weight-700">
+            <div class="c-gray uppercase f-12 weight-700">
               in evidenza
-            </span>
+            </div>
             <div class="horizontal-on-bar"></div>
           </div>
-          <span class="c-gray uppercase f-12 weight-700 mr-20 fit-content">
+          <div class="main-nav-icon">
+            <i class="fa-solid fa-ellipsis c-gray d-none-xs"></i>
+          </div>
+          <span class="c-gray uppercase f-12 weight-700 mr-20 fit-content d-none d-block-xs">
             podcast
           </span>
           <span
-            class="c-gray uppercase f-12 weight-700 mr-20 mr-s-0 mr-md-20 fit-content"
+            class="c-gray uppercase f-12 weight-700 mr-20 mr-s-0 mr-md-20 fit-content d-none d-block-xs"
           >
             classifiche
           </span>
           <span
-            class="c-gray uppercase f-12 weight-700 d-none-s d-block-md mr-md-20 fit-content"
+            class="c-gray uppercase f-12 weight-700 d-none-s d-block-md mr-md-20 fit-content d-none d-block-xs"
           >
             generi e mood
           </span>
@@ -162,11 +165,11 @@
             generi e mood
           </span>
           <span
-            class="c-gray uppercase f-12 weight-700 mr-20 d-none-md fit-content"
+            class="c-gray uppercase f-12 weight-700 mr-20 d-none-md fit-content d-none d-block-xs"
           >
             nuove uscite
           </span>
-          <span class="c-gray uppercase f-12 weight-700 d-none-lg fit-content">
+          <span class="c-gray uppercase f-12 weight-700 d-none-lg fit-content d-none d-block-xs">
             scopri
           </span>
         </div>
@@ -365,8 +368,8 @@
     <!-- /#site-main -->
     <footer id="site-footer">
       <div class="container-footer d-flex">
-        <div class="left d-flex align-center">
-          <div class="played-song-cover">
+        <div class="left flex-column align-center space-around d-flex-s flex-start-s">
+          <div class="played-song-cover d-none d-block-s">
             <img src="./assets/img/sinister.jpeg" alt="cover">
           </div>
           <div class="played-song-info">
@@ -377,8 +380,8 @@
               Brano Nome
             </div>
           </div>
-          <div class="played-song-actions flex-column flex-row-md">
-            <div class="heart">
+          <div class="played-song-actions d-flex flex-column-s flex-row-md">
+            <div class="heart mr-20 mr-s-0">
               <i class="fa-regular fa-heart c-gray f-14"></i>
             </div>
             <div class="folder">
@@ -404,13 +407,13 @@
             <div class="song-lenght c-white f-10">4:35</div>
           </div>
         </div>
-        <div class="right d-flex align-center flex-end c-white f-12">
-          <div class="volume-box d-flex flex-end">
-            <i class="fa-solid fa-list-ul"></i>
-            <i class="fa-solid fa-display"></i>
+        <div class="right d-flex align-center justify-center flex-end-s c-white f-12-s">
+          <div class="volume-box flex-column align-center flex-row-md flex-end gap-s-15 gap-lg-25">
+            <i class="fa-solid fa-list-ul d-none d-block-s"></i>
+            <i class="fa-solid fa-display d-none d-block-s order-1 order-md-0"></i>
             <i class="fa-solid fa-volume-high"></i>
           </div>
-          <div class="volume-bar">
+          <div class="volume-bar d-none d-block-s">
             <div class="volume-status relative">
                 <div class="volume-status-cursor absolute d-none"></div>
             </div>
